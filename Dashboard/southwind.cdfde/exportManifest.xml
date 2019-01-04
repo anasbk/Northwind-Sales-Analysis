@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:ExportManifest xmlns:ns2="http://www.pentaho.com/schema/">
+    <ExportManifestInformation exportDate="04-01-2018 04:30:37 CET" exportBy="admin" rootFolder="/home/admin/" manifestVersion="2"/>
+    <ExportManifestEntity path="southwind.cdfde">
+        <ExportManifestProperty>
+            <EntityMetaData name="southwind.cdfde" createdDate="2018-01-02T03:41:26.532+01:00" isFolder="false" path="southwind.cdfde" isHidden="false" isSchedulable="true" locale="fr_FR" title="southwind.cdfde"/>
+        </ExportManifestProperty>
+        <ExportManifestProperty>
+            <EntityAcl>
+                <entriesInheriting>true</entriesInheriting>
+                <owner>admin</owner>
+                <ownerType>USER</ownerType>
+            </EntityAcl>
+        </ExportManifestProperty>
+    </ExportManifestEntity>
+</ns2:ExportManifest>

@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CDADescriptor>
+   <DataSources>
+      <Connection id="YearsSelectQuery" type="mondrian.jndi">
+         <Catalog>mondrian:/Southwind</Catalog>
+         <Jndi>southwind</Jndi>
+      </Connection>
+      <Connection id="CatSelectQuery" type="mondrian.jndi">
+         <Catalog>mondrian:/Southwind</Catalog>
+         <Jndi>southwind</Jndi>
+      </Connection>
+      <Connection id="CountySelectQuery" type="mondrian.jndi">
+         <Catalog>mondrian:/Southwind</Catalog>
+         <Jndi>southwind</Jndi>
+      </Connection>
+      <Connection id="QuantityByEmpQuery" type="mondrian.jndi">
+         <Catalog>mondrian:/Southwind</Catalog>
+         <Jndi>southwind</Jndi>
+      </Connection>
+      <Connection id="SumQuantQuery" type="mondrian.jndi">
+         <Catalog>mondrian:/Southwind</Catalog>
+         <Jndi>southwind</Jndi>
+      </Connection>
+      <Connection id="SumSalesQuery" type="mondrian.jndi">
+         <Catalog>mondrian:/Southwind</Catalog>
+         <Jndi>southwind</Jndi>
+      </Connection>
+      <Connection id="SumFreightQuery" type="mondrian.jndi">
+         <Catalog>mondrian:/Southwind</Catalog>
+         <Jndi>southwind</Jndi>
+      </Connection>
+      <Connection id="QuantityByEmpQuery" type="mondrian.jndi">
+         <Catalog>mondrian:/Southwind</Catalog>
+         <Jndi>southwind</Jndi>
+      </Connection>
+      <Connection id="SalesByEmpQuery" type="mondrian.jndi">
+         <Catalog>mondrian:/Southwind</Catalog>
+         <Jndi>southwind</Jndi>
+      </Connection>
+      <Connection id="FreightByEmpQuery" type="mondrian.jndi">
+         <Catalog>mondrian:/Southwind</Catalog>
+         <Jndi>southwind</Jndi>
+      </Connection>
+      <Connection id="CustomersListQuery" type="mondrian.jndi">
+         <Catalog>mondrian:/Southwind</Catalog>
+         <Jndi>southwind</Jndi>
+      </Connection>
+      <Connection id="ProductsListQuery" type="mondrian.jndi">
+         <Catalog>mondrian:/Southwind</Catalog>
+         <Jndi>southwind</Jndi>
+      </Connection>
+      <Connection id="SalesSummaryQuery" type="mondrian.jndi">
+         <Catalog>mondrian:/Southwind</Catalog>
+         <Jndi>southwind</Jndi>
+      </Connection>
+   </DataSources>
+   <DataAccess access="public" connection="YearsSelectQuery" id="YearsSelectQuery" type="mdx">
+      <Name>YearsSelectQuery</Name>
+      <BandedMode>compact</BandedMode>
+      <Cache duration="3600" enabled="true"/>
+      <Columns/>
+      <Output indexes="0,0" mode="include"/>
+      <Parameters/>
+      <Query><![CDATA[SELECT {[Measures].[UnitSales]} ON COLUMNS, Hierarchize(Union({[Dates].[All Years]}, [Dates].[All Years].Children)) ON ROWS FROM [Sales]]]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="CatSelectQuery" id="CatSelectQuery" type="mdx">
+      <Name>CatSelectQuery</Name>
+      <BandedMode>compact</BandedMode>
+      <Cache duration="3600" enabled="true"/>
+      <Columns/>
+      <Output indexes="0,0" mode="include"/>
+      <Parameters/>
+      <Query><![CDATA[SELECT {[Measures].[UnitSales]} ON COLUMNS, Hierarchize(Union({[Products].[All Products]}, [Products].[All Products].Children)) ON ROWS FROM [Sales]]]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="CountySelectQuery" id="CountySelectQuery"
+               type="mdx">
+      <Name>CountySelectQuery</Name>
+      <BandedMode>compact</BandedMode>
+      <Cache duration="3600" enabled="true"/>
+      <Columns/>
+      <Output indexes="0,0" mode="include"/>
+      <Parameters/>
+      <Query><![CDATA[SELECT {[Measures].[UnitSales]} ON COLUMNS, Hierarchize(Union({[Locations].[All Locations]}, [Locations].[All Locations].Children)) ON ROWS FROM [Sales]]]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="QuantityByEmpQuery" id="QuantityByEmpQuery"
+               type="mdx">
+      <Name>QuantityByEmpQuery</Name>
+      <BandedMode>compact</BandedMode>
+      <Cache duration="3600" enabled="true"/>
+      <Columns/>
+      <Parameters/>
+      <Query><![CDATA[SELECT {[Measures].[Quantity]} ON COLUMNS, {ORDER([Employees].Children, [Measures].[Quantity], DESC)} ON ROWS FROM [Sales]]]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="SumQuantQuery" id="SumQuantQuery" type="mdx">
+      <Name>SumQuantQuery</Name>
+      <BandedMode>compact</BandedMode>
+      <Cache duration="3600" enabled="true"/>
+      <Columns/>
+      <Output indexes="1,1" mode="include"/>
+      <Parameters>
+         <Parameter default="YearsParam" name="YearsParam" type="String"/>
+         <Parameter default="LocationParam" name="LocationParam" type="String"/>
+         <Parameter default="CategoryParam" name="CategoryParam" type="String"/>
+      </Parameters>
+      <Query><![CDATA[SELECT {[Measures].[Quantity]} ON COLUMNS, {[Customers].[All customers]} ON ROWS FROM [Sales]
+WHERE {([Dates].[${YearsParam}],[Locations].[${LocationParam}],[Products].[${CategoryParam}])}]]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="SumSalesQuery" id="SumSalesQuery" type="mdx">
+      <Name>SumSalesQuery</Name>
+      <BandedMode>compact</BandedMode>
+      <Cache duration="3600" enabled="true"/>
+      <Columns/>
+      <Output indexes="1,1" mode="include"/>
+      <Parameters>
+         <Parameter default="YearsParam" name="YearsParam" type="String"/>
+         <Parameter default="CategoryParam" name="CategoryParam" type="String"/>
+         <Parameter default="LocationParam" name="LocationParam" type="String"/>
+      </Parameters>
+      <Query><![CDATA[SELECT {[Measures].[UnitSales]} ON COLUMNS, {[Customers].[All customers]} ON ROWS FROM [Sales]
+WHERE {([Dates].[${YearsParam}],[Locations].[${LocationParam}],[Products].[${CategoryParam}])}]]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="SumFreightQuery" id="SumFreightQuery" type="mdx">
+      <Name>SumFreightQuery</Name>
+      <BandedMode>compact</BandedMode>
+      <Cache duration="3600" enabled="true"/>
+      <Columns/>
+      <Parameters>
+         <Parameter default="YearsParam" name="YearsParam" type="String"/>
+         <Parameter default="CategoryParam" name="CategoryParam" type="String"/>
+         <Parameter default="LocationParam" name="LocationParam" type="String"/>
+      </Parameters>
+      <Query><![CDATA[SELECT {[Measures].[freight]} ON COLUMNS, {[Customers].[All customers]} ON ROWS FROM [Sales]
+WHERE {([Dates].[${YearsParam}],[Locations].[${LocationParam}],[Products].[${CategoryParam}])}]]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="QuantityByEmpQuery" id="QuantityByEmpQuery"
+               type="mdx">
+      <Name>QuantityByEmpQuery</Name>
+      <BandedMode>compact</BandedMode>
+      <Cache duration="3600" enabled="true"/>
+      <Columns/>
+      <Parameters/>
+      <Query><![CDATA[SELECT {[Measures].[Quantity]} ON COLUMNS, {ORDER(Descendants([Employees], 2.0),[Measures].[Quantity],BASC)} ON ROWS FROM [Sales]]]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="SalesByEmpQuery" id="SalesByEmpQuery" type="mdx">
+      <Name>SalesByEmpQuery</Name>
+      <BandedMode>compact</BandedMode>
+      <Cache duration="3600" enabled="true"/>
+      <Columns/>
+      <Parameters/>
+      <Query><![CDATA[SELECT {[Measures].[UnitSales]} ON COLUMNS, {ORDER(Descendants([Employees], 2.0),[Measures].[UnitSales],BASC)} ON ROWS FROM [Sales]]]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="FreightByEmpQuery" id="FreightByEmpQuery"
+               type="mdx">
+      <Name>FreightByEmpQuery</Name>
+      <BandedMode>compact</BandedMode>
+      <Cache duration="3600" enabled="true"/>
+      <Columns/>
+      <Parameters/>
+      <Query><![CDATA[SELECT {[Measures].[Freight]} ON COLUMNS, {ORDER(Descendants([Employees], 2.0),[Measures].[Freight],BASC)} ON ROWS FROM [Sales]]]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="CustomersListQuery" id="CustomersListQuery"
+               type="mdx">
+      <Name>CustomersListQuery</Name>
+      <BandedMode>compact</BandedMode>
+      <Cache duration="3600" enabled="true"/>
+      <Columns/>
+      <Parameters/>
+      <Query><![CDATA[SELECT {[Measures].[UnitSales], [Measures].[Quantity]} ON COLUMNS, {ORDER([Customers].Levels(3.0).Members,[Measures].[UnitSales],BDESC)} ON ROWS FROM [Sales]]]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="ProductsListQuery" id="ProductsListQuery"
+               type="mdx">
+      <Name>ProductsListQuery</Name>
+      <BandedMode>compact</BandedMode>
+      <Cache duration="3600" enabled="true"/>
+      <Columns/>
+      <Parameters/>
+      <Query><![CDATA[SELECT {[Measures].[UnitSales], [Measures].[Quantity]} ON COLUMNS, {ORDER([Products].Levels(2.0).Members, [Measures].[UnitSales], BDESC)} ON ROWS FROM [Sales]]]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="SalesSummaryQuery" id="SalesSummaryQuery"
+               type="mdx">
+      <Name>SalesSummaryQuery</Name>
+      <BandedMode>compact</BandedMode>
+      <Cache duration="3600" enabled="true"/>
+      <Columns/>
+      <Parameters>
+         <Parameter default="YearsSumParam" name="YearsSumParam" type="String"/>
+      </Parameters>
+      <Query><![CDATA[SELECT {[Measures].[UnitSales]} ON COLUMNS, {[Dates].[${YearsSumParam}].Children} ON ROWS FROM [Sales]]]></Query>
+   </DataAccess>
+</CDADescriptor>

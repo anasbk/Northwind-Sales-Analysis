@@ -1,0 +1,78 @@
+ProductName,CategoryName,UnitPrice,UnitsInStock,Quantity,Discontinued,Discontinued_predicted
+Alice Mutton                            ,Meat/Poultry   ,39,0,30,Y,Y
+Aniseed Syrup                           ,Condiments     ,10,13,30,N,N
+Boston Crab Meat                        ,Seafood        ,18.4,123,50,N,N
+Camembert Pierrot                       ,Dairy Products ,34,19,40,N,N
+Carnarvon Tigers                        ,Seafood        ,62.5,42,12,N,N
+Chai                                    ,Beverages      ,18,39,45,N,N
+Chang                                   ,Beverages      ,19,17,20,N,N
+Chartreuse verte                        ,Beverages      ,18,69,42,N,N
+Chef Anton_s Cajun Seasoning            ,Condiments     ,22,53,20,N,N
+Chef Anton_s Gumbo Mix                  ,Condiments     ,21.4,0,65,Y,N
+Chocolade                               ,Confections    ,12.8,15,70,N,N
+Cte de Blaye                            ,Beverages      ,263.5,17,20,N,N
+Escargots de Bourgogne                  ,Seafood        ,13.2,62,30,N,N
+Filo Mix                                ,Grains/Cereals ,7,38,20,N,N
+Flotemysost                             ,Dairy Products ,21.5,26,20,N,N
+Geitost                                 ,Dairy Products ,2.5,112,25,N,N
+Genen Shouyu                            ,Condiments     ,15.5,39,20,N,N
+Gnocchi di nonna Alice                  ,Grains/Cereals ,38,21,2,N,N
+Gorgonzola Telino                       ,Dairy Products ,12.5,0,20,N,N
+Grandma_s Boysenberry Spread            ,Condiments     ,25,120,30,N,N
+Gravad lax                              ,Seafood        ,26,11,1,N,N
+Guaran Fantstica                        ,Beverages      ,4.5,20,15,Y,N
+Gudbrandsdalsost                        ,Dairy Products ,36,26,15,N,N
+Gula Malacca                            ,Condiments     ,19.4,27,16,N,N
+Gumbr Gummibrchen                       ,Confections    ,31.2,15,50,N,N
+Gustaf_s Knckebrd                       ,Grains/Cereals ,21,104,6,N,N
+Ikura                                   ,Seafood        ,31,31,24,N,N
+Inlagd Sill                             ,Seafood        ,19,112,25,N,N
+Ipoh Coffee                             ,Beverages      ,46,17,25,N,N
+Jack_s New England Clam Chowder         ,Seafood        ,9.7,85,10,N,N
+Konbu                                   ,Seafood        ,6,24,10,N,N
+Lakkalikri                              ,Beverages      ,18,57,15,N,N
+Laughing Lumberjack Lager               ,Beverages      ,14,52,5,N,N
+Longlife Tofu                           ,Produce        ,10,4,21,N,N
+Louisiana Fiery Hot Pepper Sauce        ,Condiments     ,21.1,76,15,N,N
+Louisiana Hot Spiced Okra               ,Condiments     ,17,4,30,N,N
+Manjimup Dried Apples                   ,Produce        ,53,20,40,N,N
+Mascarpone Fabioli                      ,Dairy Products ,32,9,6,N,N
+Maxilaku                                ,Confections    ,20,10,40,N,N
+Mishi Kobe Niku                         ,Meat/Poultry   ,97,29,20,Y,Y
+Mozzarella di Giovanni                  ,Dairy Products ,34.8,14,5,N,N
+Nord-Ost Matjeshering                   ,Seafood        ,25.9,10,60,N,N
+Northwoods Cranberry Sauce              ,Condiments     ,40,6,70,N,N
+NuNuCa Nu-Nougat-Creme                  ,Confections    ,14,76,4,N,N
+Original Frankfurter grne Soe           ,Condiments     ,13,32,12,N,N
+Outback Lager                           ,Beverages      ,15,15,21,N,N
+Pavlova                                 ,Confections    ,17.4,29,35,N,N
+Perth Pasties                           ,Meat/Poultry   ,32.8,0,15,Y,Y
+Pt chinois                              ,Meat/Poultry   ,24,115,21,N,N
+Queso Cabrales                          ,Dairy Products ,21,22,12,N,N
+Queso Manchego La Pastora               ,Dairy Products ,38,86,12,N,N
+Raclette Courdavault                    ,Dairy Products ,55,79,30,N,N
+Ravioli Angelo                          ,Grains/Cereals ,19.5,36,15,N,N
+Rd Kaviar                               ,Seafood        ,15,101,25,N,N
+Rhnbru Klosterbier                      ,Beverages      ,7.8,125,30,N,N
+Rogede sild                             ,Seafood        ,9.5,5,15,N,N
+Rssle Sauerkraut                        ,Produce        ,45.6,26,20,Y,N
+Sasquatch Ale                           ,Beverages      ,14,111,20,N,N
+Schoggi Schokolade                      ,Confections    ,43.9,49,25,N,N
+Scottish Longbreads                     ,Confections    ,12.5,6,3,N,N
+Singaporean Hokkien Fried Mee           ,Grains/Cereals ,14,26,10,Y,N
+Sir Rodney_s Marmalade                  ,Confections    ,81,40,40,N,N
+Sir Rodney_s Scones                     ,Confections    ,10,3,10,N,N
+Sirop d_rable                           ,Condiments     ,28.5,113,16,N,N
+Spegesild                               ,Seafood        ,12,95,15,N,N
+Steeleye Stout                          ,Beverages      ,18,20,20,N,N
+Tarte au sucre                          ,Confections    ,49.3,17,15,N,N
+Teatime Chocolate Biscuits              ,Confections    ,9.2,25,1,N,N
+Thringer Rostbratwurst                  ,Meat/Poultry   ,123.8,0,10,Y,Y
+Tofu                                    ,Produce        ,23.2,35,9,N,N
+Tourtire                                ,Meat/Poultry   ,7.5,21,10,N,N
+Tunnbrd                                 ,Grains/Cereals ,9,61,40,N,N
+Uncle Bob_s Organic Dried Pears         ,Produce        ,30,15,15,N,N
+Valkoinen suklaa                        ,Confections    ,16.2,65,15,N,N
+Vegie-spread                            ,Condiments     ,43.9,24,8,N,N
+Wimmers gute Semmelkndel                ,Grains/Cereals ,33.2,22,9,N,N
+Zaanse koeken                           ,Confections    ,9.5,36,16,N,N

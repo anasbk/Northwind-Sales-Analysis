@@ -1,0 +1,100 @@
+<Schema name="Southwind">
+  <Cube name="Sales" visible="true" cache="true" enabled="true">
+    <Table name="fact_orders">
+    </Table>
+    <Dimension type="StandardDimension" visible="true" foreignKey="CustomerID" highCardinality="false" name="Customers">
+      <Hierarchy visible="true" hasAll="true" allMemberName="All customers" primaryKey="CustomerID">
+        <Table name="dim_customers">
+        </Table>
+        <Level name="Customer Country" visible="true" column="Country" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+        </Level>
+        <Level name="Customer City" visible="true" column="City" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+        </Level>
+        <Level name="Customer Name" visible="true" column="CustomerID" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+        </Level>
+      </Hierarchy>
+    </Dimension>
+    <Dimension type="StandardDimension" visible="true" foreignKey="EmployeeID" highCardinality="false" name="Employees">
+      <Hierarchy visible="true" hasAll="true" allMemberName="All Employees" primaryKey="EmployeeID">
+        <Table name="dim_employees">
+        </Table>
+        <Level name="Title" visible="true" column="Title" type="String" uniqueMembers="true" levelType="Regular" hideMemberIf="Never">
+        </Level>
+        <Level name="Employee" visible="true" column="FullName" type="String" uniqueMembers="true" levelType="Regular" hideMemberIf="Never">
+        </Level>
+      </Hierarchy>
+    </Dimension>
+    <Dimension type="TimeDimension" visible="true" foreignKey="OrderDateID" highCardinality="false" name="Dates">
+      <Hierarchy visible="true" hasAll="true" allMemberName="All Years" primaryKey="DateID">
+        <Table name="dim_dates">
+        </Table>
+        <Level name="Year" visible="true" column="year" type="Numeric" uniqueMembers="true" levelType="TimeYears" hideMemberIf="Never">
+        </Level>
+        <Level name="Month" visible="true" column="month" type="Numeric" uniqueMembers="false" levelType="TimeMonths" hideMemberIf="Never">
+        </Level>
+        <Level name="Day" visible="true" column="day_of_month" type="Numeric" uniqueMembers="false" levelType="TimeDays" hideMemberIf="Never">
+        </Level>
+      </Hierarchy>
+      <Hierarchy name="Quarterly" visible="true" hasAll="true" allMemberName="All Years" primaryKey="DateID">
+        <Table name="dim_dates">
+        </Table>
+        <Level name="Year" visible="true" column="year" type="Numeric" uniqueMembers="true" levelType="TimeYears" hideMemberIf="Never">
+        </Level>
+        <Level name="Quarter" visible="true" column="quarter_of_year" type="String" uniqueMembers="false" levelType="TimeQuarters" hideMemberIf="Never">
+        </Level>
+        <Level name="Day" visible="true" column="day_of_month" type="Numeric" uniqueMembers="false" levelType="TimeDays" hideMemberIf="Never">
+        </Level>
+      </Hierarchy>
+    </Dimension>
+    <Dimension type="StandardDimension" visible="true" foreignKey="SupplierID" highCardinality="false" name="Suppliers">
+      <Hierarchy visible="true" hasAll="true" allMemberName="All Suppliers" primaryKey="SupplierID">
+        <Table name="dim_suppliers">
+        </Table>
+        <Level name="CompanyName" visible="true" column="CompanyName" type="String" uniqueMembers="true" levelType="Regular" hideMemberIf="Never">
+        </Level>
+        <Level name="ContactTitle" visible="true" column="ContactTitle" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+        </Level>
+        <Level name="ContactName" visible="true" column="ContactName" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+        </Level>
+      </Hierarchy>
+    </Dimension>
+    <Dimension type="StandardDimension" visible="true" foreignKey="ProductID" highCardinality="false" name="Products">
+      <Hierarchy visible="true" hasAll="true" allMemberName="All Products" primaryKey="ProductID">
+        <Table name="dim_products">
+        </Table>
+        <Level name="Product Categories" visible="true" column="CategoryName" type="String" uniqueMembers="true" levelType="Regular" hideMemberIf="Never">
+        </Level>
+        <Level name="Product Names" visible="true" column="ProductName" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+        </Level>
+      </Hierarchy>
+    </Dimension>
+    <Dimension type="StandardDimension" visible="true" foreignKey="ShipperID" highCardinality="false" name="Shippers">
+      <Hierarchy visible="true" hasAll="true" allMemberName="All Shippers" primaryKey="ShipperID">
+        <Table name="dim_shippers">
+        </Table>
+        <Level name="Company Name" visible="true" column="CompanyName" type="String" uniqueMembers="true" levelType="Regular" hideMemberIf="Never">
+        </Level>
+      </Hierarchy>
+    </Dimension>
+    <Dimension type="StandardDimension" visible="true" foreignKey="ShipLocationID" highCardinality="false" name="Locations">
+      <Hierarchy visible="true" hasAll="true" allMemberName="All Locations" primaryKey="ShipLocationID">
+        <Table name="dim_shiplocation">
+        </Table>
+        <Level name="Ship Country" visible="true" column="ShipCountry" type="String" uniqueMembers="true" levelType="Regular" hideMemberIf="Never">
+        </Level>
+        <Level name="Ship  City" visible="true" column="ShipCity" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+        </Level>
+      </Hierarchy>
+    </Dimension>
+    <Measure name="Quantity" column="Quantity" aggregator="sum" visible="true">
+    </Measure>
+    <Measure name="UnitPrice" column="UnitPrice" datatype="Numeric" aggregator="sum" visible="true">
+    </Measure>
+    <Measure name="Freight" column="Freight" formatString="#,###.00" aggregator="sum" visible="true">
+    </Measure>
+    <Measure name="LeadTime" column="LeadTime" datatype="Integer" aggregator="sum" visible="true">
+    </Measure>
+    <Measure name="UnitSales" column="UnitSales" datatype="Numeric" formatString="#,###.00" aggregator="sum" visible="true">
+    </Measure>
+  </Cube>
+</Schema>

@@ -1,0 +1,87 @@
+@relation 'Res-weka.filters.unsupervised.attribute.Reorder-R1,2,3,4,5,6'
+
+@attribute ProductName {'Alice Mutton                            ','Aniseed Syrup                           ','Boston Crab Meat                        ','Camembert Pierrot                       ','Carnarvon Tigers                        ','Chai                                    ','Chang                                   ','Chartreuse verte                        ','Chef Anton_s Cajun Seasoning            ','Chef Anton_s Gumbo Mix                  ','Chocolade                               ','Cte de Blaye                            ','Escargots de Bourgogne                  ','Filo Mix                                ','Flotemysost                             ','Geitost                                 ','Genen Shouyu                            ','Gnocchi di nonna Alice                  ','Gorgonzola Telino                       ','Grandma_s Boysenberry Spread            ','Gravad lax                              ','Guaran Fantstica                        ','Gudbrandsdalsost                        ','Gula Malacca                            ','Gumbr Gummibrchen                       ','Gustaf_s Knckebrd                       ','Ikura                                   ','Inlagd Sill                             ','Ipoh Coffee                             ','Jack_s New England Clam Chowder         ','Konbu                                   ','Lakkalikri                              ','Laughing Lumberjack Lager               ','Longlife Tofu                           ','Louisiana Fiery Hot Pepper Sauce        ','Louisiana Hot Spiced Okra               ','Manjimup Dried Apples                   ','Mascarpone Fabioli                      ','Maxilaku                                ','Mishi Kobe Niku                         ','Mozzarella di Giovanni                  ','Nord-Ost Matjeshering                   ','Northwoods Cranberry Sauce              ','NuNuCa Nu-Nougat-Creme                  ','Original Frankfurter grne Soe           ','Outback Lager                           ','Pavlova                                 ','Perth Pasties                           ','Pt chinois                              ','Queso Cabrales                          ','Queso Manchego La Pastora               ','Raclette Courdavault                    ','Ravioli Angelo                          ','Rd Kaviar                               ','Rhnbru Klosterbier                      ','Rogede sild                             ','Rssle Sauerkraut                        ','Sasquatch Ale                           ','Schoggi Schokolade                      ','Scottish Longbreads                     ','Singaporean Hokkien Fried Mee           ','Sir Rodney_s Marmalade                  ','Sir Rodney_s Scones                     ','Sirop d_rable                           ','Spegesild                               ','Steeleye Stout                          ','Tarte au sucre                          ','Teatime Chocolate Biscuits              ','Thringer Rostbratwurst                  ','Tofu                                    ','Tourtire                                ','Tunnbrd                                 ','Uncle Bob_s Organic Dried Pears         ','Valkoinen suklaa                        ','Vegie-spread                            ','Wimmers gute Semmelkndel                ','Zaanse koeken                           '}
+@attribute CategoryName {'Meat/Poultry   ','Condiments     ','Seafood        ','Dairy Products ','Beverages      ','Confections    ','Grains/Cereals ','Produce        '}
+@attribute UnitPrice numeric
+@attribute UnitsInStock numeric
+@attribute Quantity numeric
+@attribute Discontinued {Y,N}
+
+@data
+'Alice Mutton                            ','Meat/Poultry   ',39,0,30,Y
+'Chef Anton_s Gumbo Mix                  ','Condiments     ',21.35,0,65,Y
+'Guaran Fantstica                        ','Beverages      ',4.5,20,15,Y
+'Mishi Kobe Niku                         ','Meat/Poultry   ',97,29,20,Y
+'Perth Pasties                           ','Meat/Poultry   ',32.8,0,15,Y
+'Rssle Sauerkraut                        ','Produce        ',45.6,26,20,Y
+'Singaporean Hokkien Fried Mee           ','Grains/Cereals ',14,26,10,Y
+'Thringer Rostbratwurst                  ','Meat/Poultry   ',123.79,0,10,Y
+'Aniseed Syrup                           ','Condiments     ',10,13,30,N
+'Boston Crab Meat                        ','Seafood        ',18.4,123,50,N
+'Camembert Pierrot                       ','Dairy Products ',34,19,40,N
+'Carnarvon Tigers                        ','Seafood        ',62.5,42,12,N
+'Chai                                    ','Beverages      ',18,39,45,N
+'Chang                                   ','Beverages      ',19,17,20,N
+'Chartreuse verte                        ','Beverages      ',18,69,42,N
+'Chef Anton_s Cajun Seasoning            ','Condiments     ',22,53,20,N
+'Chocolade                               ','Confections    ',12.75,15,70,N
+'Cte de Blaye                            ','Beverages      ',263.5,17,20,N
+'Escargots de Bourgogne                  ','Seafood        ',13.25,62,30,N
+'Filo Mix                                ','Grains/Cereals ',7,38,20,N
+'Flotemysost                             ','Dairy Products ',21.5,26,20,N
+'Geitost                                 ','Dairy Products ',2.5,112,25,N
+'Genen Shouyu                            ','Condiments     ',15.5,39,20,N
+'Gnocchi di nonna Alice                  ','Grains/Cereals ',38,21,2,N
+'Gorgonzola Telino                       ','Dairy Products ',12.5,0,20,N
+'Grandma_s Boysenberry Spread            ','Condiments     ',25,120,30,N
+'Gravad lax                              ','Seafood        ',26,11,1,N
+'Gudbrandsdalsost                        ','Dairy Products ',36,26,15,N
+'Gula Malacca                            ','Condiments     ',19.45,27,16,N
+'Gumbr Gummibrchen                       ','Confections    ',31.23,15,50,N
+'Gustaf_s Knckebrd                       ','Grains/Cereals ',21,104,6,N
+'Ikura                                   ','Seafood        ',31,31,24,N
+'Inlagd Sill                             ','Seafood        ',19,112,25,N
+'Ipoh Coffee                             ','Beverages      ',46,17,25,N
+'Jack_s New England Clam Chowder         ','Seafood        ',9.65,85,10,N
+'Konbu                                   ','Seafood        ',6,24,10,N
+'Lakkalikri                              ','Beverages      ',18,57,15,N
+'Laughing Lumberjack Lager               ','Beverages      ',14,52,5,N
+'Longlife Tofu                           ','Produce        ',10,4,21,N
+'Louisiana Fiery Hot Pepper Sauce        ','Condiments     ',21.05,76,15,N
+'Louisiana Hot Spiced Okra               ','Condiments     ',17,4,30,N
+'Manjimup Dried Apples                   ','Produce        ',53,20,40,N
+'Mascarpone Fabioli                      ','Dairy Products ',32,9,6,N
+'Maxilaku                                ','Confections    ',20,10,40,N
+'Mozzarella di Giovanni                  ','Dairy Products ',34.8,14,5,N
+'Nord-Ost Matjeshering                   ','Seafood        ',25.89,10,60,N
+'Northwoods Cranberry Sauce              ','Condiments     ',40,6,70,N
+'NuNuCa Nu-Nougat-Creme                  ','Confections    ',14,76,4,N
+'Original Frankfurter grne Soe           ','Condiments     ',13,32,12,N
+'Outback Lager                           ','Beverages      ',15,15,21,N
+'Pavlova                                 ','Confections    ',17.45,29,35,N
+'Pt chinois                              ','Meat/Poultry   ',24,115,21,N
+'Queso Cabrales                          ','Dairy Products ',21,22,12,N
+'Queso Manchego La Pastora               ','Dairy Products ',38,86,12,N
+'Raclette Courdavault                    ','Dairy Products ',55,79,30,N
+'Ravioli Angelo                          ','Grains/Cereals ',19.5,36,15,N
+'Rd Kaviar                               ','Seafood        ',15,101,25,N
+'Rhnbru Klosterbier                      ','Beverages      ',7.75,125,30,N
+'Rogede sild                             ','Seafood        ',9.5,5,15,N
+'Sasquatch Ale                           ','Beverages      ',14,111,20,N
+'Schoggi Schokolade                      ','Confections    ',43.9,49,25,N
+'Scottish Longbreads                     ','Confections    ',12.5,6,3,N
+'Sir Rodney_s Marmalade                  ','Confections    ',81,40,40,N
+'Sir Rodney_s Scones                     ','Confections    ',10,3,10,N
+'Sirop d_rable                           ','Condiments     ',28.5,113,16,N
+'Spegesild                               ','Seafood        ',12,95,15,N
+'Steeleye Stout                          ','Beverages      ',18,20,20,N
+'Tarte au sucre                          ','Confections    ',49.3,17,15,N
+'Teatime Chocolate Biscuits              ','Confections    ',9.2,25,1,N
+'Tofu                                    ','Produce        ',23.25,35,9,N
+'Tourtire                                ','Meat/Poultry   ',7.45,21,10,N
+'Tunnbrd                                 ','Grains/Cereals ',9,61,40,N
+'Uncle Bob_s Organic Dried Pears         ','Produce        ',30,15,15,N
+'Valkoinen suklaa                        ','Confections    ',16.25,65,15,N
+'Vegie-spread                            ','Condiments     ',43.9,24,8,N
+'Wimmers gute Semmelkndel                ','Grains/Cereals ',33.25,22,9,N
+'Zaanse koeken                           ','Confections    ',9.5,36,16,N
